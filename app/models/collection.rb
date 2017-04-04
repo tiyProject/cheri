@@ -1,6 +1,6 @@
 class Collection < ApplicationRecord
-  have_many   :products
-  have_many   :style, through:  :products
-  have_many   :sizes, through:  :products
-  
+  has_many   :products
+  has_many   :styles, through:  :products
+  has_many   :sizes,  through:  :products
+
 end

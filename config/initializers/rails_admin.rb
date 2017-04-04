@@ -1,8 +1,10 @@
 RailsAdmin.config do |config|
+  config.authenticate_with do
+    authenticate_or_request_with_http_basic do |username, password|
+      username == 'user' &&
+      password == 'password'
+    end
+  end
 
-   config.authorize_with do
-     authenticate_or_request_with_http_basic('Site Message') do |username, password|
-       User.find_by(username: username).try(:authenticate, password).try(:admin?)
-     end
-   end
+  # Other config stuff should go here
 end
