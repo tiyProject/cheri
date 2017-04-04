@@ -37,6 +37,7 @@ gem 'rails_12factor', group: :production
 gem 'carrierwave'
 gem 'figaro'
 gem 'rails_admin', '1.1.0'
+gem 'mini_magick'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
