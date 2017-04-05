@@ -1,28 +1,63 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    
-    <title>Chéri</title>
-  </head>
-  <body>
-<div class="columns is-multiline is-mobile">
-  <div class="column is-one-quarter">
-    <code>image carousel</code>
-  </div>
-  <div class="column is-one-quarter">
-    <code>image carousel</code>
-  </div>
-  <div class="column is-one-quarter">
-    <code>image carousel</code>
-  </div>
-  <div class="column is-one-quarter">
-    <code>image carousel</code>
-  </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <link rel="stylesheet" href="css/global.css" />
+
+  <title>Chéri</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="nav-center">
+      <a class="nav-item iAM">
+           I am 
+      </a>
+          <div class="field has-addons iAMField">
+           <p class="control">
+             <input class="input" type="text" placeholder="">
+          </p>
+          <p class="control">
+            <a class="button">
+              ...
+            </a>
+           </p>
+         </div>
+         
+    </div>
+  </nav>
+  <div class="container">
+    <div class="columns is-multiline is-mobile">
+      <div class="column is-one-quarter">
+        <div class="frameA">
+          <img class="titleImg" src="/img/cat1.jpeg" />
+        </div>
+      </div>
+      <div class="column is-one-quarter">
+        <div class="frameB">
+          <img class="titleImg" src="/img/cat2.jpg" />
+        </div>
+      </div>
+      <div class="column is-one-quarter">
+        <div class="frameC">
+          <img class="titleImg" src="/img/cat3.jpg" />
+        </div>
+      </div>
+      <div class="column is-one-quarter">
+        <div class="frameD">
+          <img class="titleImg" src="/img/cat4.jpeg" />
+        </div>
+      </div>
+    </div>
+
+
 
     <div id="root"></div>
-    
-  </body>
+
+</body>
+
 </html>

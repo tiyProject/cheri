@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+.container{
+    align-items: center;
+}
+.iAM{
+    font-size: 25px;
+    padding-bottom: 35px;
+}
+
+.iAMField {
+    padding-top: 10px;
+}
+
+.titleImg {
+    height: 316px;
+    width: 211px;
+    margin-left: 10px;
+    padding-top: 50px;
+}
+
+.frameA {
+    background-color: #F00314;
+    height: 500px;
+    width: 231px;
+    text-decoration: none;
+    -webkit-transition: color .15s ease-in-out;
+    transition: color .15s ease-in-out;
+    
+}
+.frameA:hover {
+    color: rgba(240, 2, 20, 0.4);
+}
+.frameB {
+    background-color: #6ACC8A;
+      height: 500px;
+    width: 231px;
+}
+.frameC {
+    background-color: #C44E00;
+      height: 500px;
+    width: 231px;
+}
+.frameD {
+    background-color: #A2D0D6;
+      height: 500px;
+    width: 231px;
+}
+
+.productNav {
+    padding-bottom: 10px;
+   
+}
+
+.logo {
+     height: 150px;
+    width: 175px;
+}
+
+.thumbNail {
+    background: #ffffff;
+    border: 1px solid #FAF9F5;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+    min-height: 300px;
+    margin-bottom: 20px;
+    max-width: 230px;
+}
+
+.frameRed{
+    background-color: #F00314;
+    height: 320px;
+    width: 250px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.previewCard{
+   
+}
