@@ -33,11 +33,14 @@ gem 'active_model_serializers'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'pry-rails'
+gem 'rack-cors'
 gem 'rails_12factor', group: :production
 gem 'carrierwave'
+gem "fog-aws"
 gem 'figaro'
 gem 'rails_admin', '1.1.0'
 gem 'mini_magick'
+gem 'stripe'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

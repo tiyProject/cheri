@@ -2,16 +2,24 @@ class CollectionsController < ApplicationController
 
   def index
     @collections = Collection.all
-    render json: @collections, include: [:products, :styles, :sizes]
+    if @collections
+      render json: @collections, include: [:products, include: [:styles, :sizes]]
+    else
+      render json: {errors: @collections.errors.full_messages }, status: 404
+    end
   end
 
   def show
-    @collection = Collection.find(controller_params[:id])
-    render json: @collection, include: [:products, :styles, :sizes]
+    @collection = Collection.find_by_id(controller_params[:id])
+    if @collection
+      render json: @collection, include: [:products, include: [:styles, :sizes]]
+    else
+      render json: {errors: @collection.errors.full_messages }, status: 404
+    end
   end
 
   def controller_params
-    params.permit(:title, :photo)
+    params.permit(:id)
   end
 
 end
