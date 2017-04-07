@@ -41,6 +41,8 @@ gem 'figaro'
 gem 'rails_admin', '1.1.0'
 gem 'mini_magick'
 gem 'stripe'
+gem 'factory_girl_rails', '~> 4.0'
+gem 'minitest'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

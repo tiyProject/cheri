@@ -65,6 +65,11 @@ GEM
     erubis (2.7.0)
     excon (0.55.0)
     execjs (2.7.0)
+    factory_girl (4.8.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.8.0)
+      factory_girl (~> 4.8.0)
+      railties (>= 3.0.0)
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
@@ -228,10 +233,12 @@ DEPENDENCIES
   active_model_serializers
   byebug
   carrierwave
+  factory_girl_rails (~> 4.0)
   figaro
   fog-aws
   listen (~> 3.0.5)
   mini_magick
+  minitest
   pg (~> 0.18)
   pry-rails
   puma (~> 3.0)
