@@ -5,12 +5,6 @@ class Minitest::Unit::TestCase
   include FactoryGirl::Syntax::Methods
 end
 
-# class CollectionTest < ActiveSupport::TestCase
-#   # test "the truth" do
-#   #   assert true
-#   # end
-# end
-
 class CollectionTest < Minitest::Test
 
   def test_collection_can_be_created
