@@ -3,6 +3,6 @@ class Size < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   mount_uploader :audio, AudioUploader
   validates_presence_of  :title
-  validates_presence_of  :descripton
+  validates_presence_of  :description
 
 end
