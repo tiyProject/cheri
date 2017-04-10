@@ -5,6 +5,10 @@
 img {
     width: 100%;
 }
+
+html {
+    background-color: #EABEC9;
+}
 .container{
     align-items: center;
 }
@@ -18,38 +22,38 @@ img {
 }
 
 .titleImg {
-    height: 316px;
-    width: 211px;
-    margin-left: 10px;
-    padding-top: 50px;
+    /*height: 316px;
+    width: 211px;*/
+    /*margin-left: 10px;*/
+    /*padding-top: 50px;*/
 }
 
-.frameA {
+.collectionImageBackground {
+    background: url(https://unsplash.it/600/900?random);
+    background-size: cover;
+}
+
+.collectionImage {
+    padding: 50px 10px 200px 10px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.collectionImage:hover {
+    opacity: 0.5;
+}
+
+.collection1 {
     background-color: #F00314;
-    height: 500px;
-    width: 231px;
-    text-decoration: none;
-    -webkit-transition: color .15s ease-in-out;
-    transition: color .15s ease-in-out;
-    
 }
-.frameA:hover {
-    color: rgba(240, 2, 20, 0.4);
-}
-.frameB {
+.collection2 {
     background-color: #6ACC8A;
-      height: 500px;
-    width: 231px;
 }
-.frameC {
+.collection3 {
     background-color: #C44E00;
-      height: 500px;
-    width: 231px;
 }
-.frameD {
+.collection4 {
     background-color: #A2D0D6;
-      height: 500px;
-    width: 231px;
 }
 
 .productNav {
@@ -67,7 +71,6 @@ img {
     border: 1px solid #FAF9F5;
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
-    margin-bottom: 30px;
     min-height: 300px;
     margin-bottom: 20px;
     max-width: 230px;
@@ -82,5 +85,55 @@ img {
 }
 
 .previewCard{
-   
+   background-color: white;
+   margin: 20px;
+}
+
+.card {
+    max-width: 468px;
+    margin: 25px auto;
+}
+
+.styleLoadSpace {
+    padding: 30px 30px 0 30px;
+}
+
+.styleLoad {
+    background: #ffffff;
+    border: 1px solid #FAF9F5;
+    border-radius: 4px;
+    box-shadow: 9px 4px 6px 6px rgba(0,0,0,0.15);
+}
+
+.price {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+
+.inline {
+    display: inline;
+}
+
+.thumbNailStyles {
+    padding: 20px;
+}
+
+.thumbNailStyle {
+    background: #ffffff;
+    border: 1px solid #FAF9F5;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.15);
+    min-height: 320px;
+    margin-bottom: 20px;
+}
+
+.container {
+    margin: 0 auto;
+    /* width: 960px; */
+    max-width: 480px;
+}
+
+.scoot {
+    margin-left: -20px;
 }
