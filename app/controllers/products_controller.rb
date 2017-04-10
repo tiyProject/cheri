@@ -1,17 +1,35 @@
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all
-    redner json: @products, include: [:styles, :sizes]
+    @collection = Collection.find_by_id(product_params[:collection_id])
+    if @collection
+      @products   = Product.all
+      if @products
+        render json: @products, include: [:styles, :sizes]
+      else
+        render json: 'No Products found', status: 404
+      end
+    else
+      render json: 'No such Collection id', status: 404
+    end
   end
 
   def show
-    @product  = Product.find(product_params[:id])
-    render json: @product, include: [:styles, :sizes]
+    @collection = Collection.find_by_id(product_params[:collection_id])
+    if @collection
+      @product  = Product.find_by_id(product_params[:id])
+      if @product
+        render json: @product, include: [:styles, :sizes]
+      else
+        render json: 'No such product id', status: 404
+      end
+    else
+      render json: 'No such collections id', status: 404
+    end
   end
 
   def product_params
-    params.permit(:price, :audio)
+    params.permit(:id, :collection_id)
   end
 
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170403204508) do
+ActiveRecord::Schema.define(version: 20170410175650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,8 +28,16 @@ ActiveRecord::Schema.define(version: 20170403204508) do
     t.text     "billing"
     t.text     "shipping"
     t.string   "stripeid"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "product_id"
+    t.integer  "size_id"
+    t.integer  "style_id"
+    t.string   "email"
+    t.string   "statusof",   default: "empty"
+    t.index ["product_id"], name: "index_orders_on_product_id", using: :btree
+    t.index ["size_id"], name: "index_orders_on_size_id", using: :btree
+    t.index ["style_id"], name: "index_orders_on_style_id", using: :btree
   end
 
   create_table "products", force: :cascade do |t|
@@ -61,6 +69,9 @@ ActiveRecord::Schema.define(version: 20170403204508) do
     t.index ["product_id"], name: "index_styles_on_product_id", using: :btree
   end
 
+  add_foreign_key "orders", "products"
+  add_foreign_key "orders", "sizes"
+  add_foreign_key "orders", "styles"
   add_foreign_key "products", "collections"
   add_foreign_key "sizes", "products"
   add_foreign_key "styles", "products"
