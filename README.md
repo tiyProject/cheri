@@ -6,11 +6,13 @@
 * System dependencies
     Carrierwave		allows file uploading
     MiniMagick		allows user to resize & crop images
-    Fog			upload images to AWS S3
+    Fog			      upload images to AWS S3
     Rails-Admin		allows for http:basic authentication
-    Figaro			for security keeps application.yml from being uploaded to GitHub
-    Stripe			handles payments
-    Send-grid		email
+    Figaro			  for security keeps application.yml from being uploaded to GitHub
+    Stripe			  handles payments
+    Send-grid		  email
+    Factory-Girl  create object to facilitate testing
+    Letter-Opener view emails on screen
 
 * Configuration
 
