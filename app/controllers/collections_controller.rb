@@ -1,7 +1,7 @@
 class CollectionsController < ApplicationController
 
   def index
-    @collections = Collection.all
+    @collections = Collection.all.order(:id)
     if @collections
       render json: @collections, include: [:products, include: [:styles, :sizes]]
     else

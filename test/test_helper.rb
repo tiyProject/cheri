@@ -17,5 +17,15 @@ class ActiveSupport::TestCase
     DatabaseCleaner.clean
   end
 
+  def new_mail( charset="UTF-8" )
+    mail = Mail.new
+    mail.mime_version = "1.0"
+    if charset
+      mail.content_type ["text", "html", { "charset" => charset }]
+    end
+    mail
+  end
+
   # Add more helper methods to be used by all tests here...
+
 end
