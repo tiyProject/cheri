@@ -41,8 +41,8 @@ class OrdersController < ApplicationController
       if @order.save
         @order.statusof = 'active'
         @product = Product.find_by_id(demo_product)
-        # @order.style = demo_style   #set up ahead of time
-        # @order.size  = demo_size    #set up ahead of time
+        @order.style = demo_style   #set up ahead of time
+        @order.size  = demo_size    #set up ahead of time
         @amount  = @product.price
         customer = Stripe::Customer.create(
           :email   => @order.email,
