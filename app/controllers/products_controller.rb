@@ -3,7 +3,8 @@ class ProductsController < ApplicationController
   def index
     @collection = Collection.find_by_id(product_params[:collection_id])
     if @collection
-      @products   = Product.all
+      # @products   = Product.all.order(:id)
+      @products  = @collection.products
       if @products
         render json: @products, include: [:styles, :sizes]
       else
@@ -15,16 +16,11 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @collection = Collection.find_by_id(product_params[:collection_id])
-    if @collection
-      @product  = Product.find_by_id(product_params[:id])
-      if @product
-        render json: @product, include: [:styles, :sizes]
-      else
-        render json: 'No such product id', status: 404
-      end
+    @product  = Product.find_by_id(product_params[:id])
+    if @product
+      render json: @product, include: [:styles, :sizes]
     else
-      render json: 'No such collections id', status: 404
+      render json: 'No such product id', status: 404
     end
   end
 

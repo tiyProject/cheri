@@ -13,37 +13,18 @@ class SizeTest < Minitest::Test
   end
 
   def test_size_without_title_fails
-    size = FactoryGirl.build(:size, title: 'a title')
-    size.title = nil
-    before = Size.count
-    size.save
-    after  = Size.count
-    assert before == after
-  end
-
-  def test_size_with_title_saves
-    size = FactoryGirl.build(:size, title: 'a title')
-    before = Size.count
-    size.save
-    after  = Size.count
-    assert after == before + 1
+    @size = FactoryGirl.build(:size, title: nil)
+    refute @size.save
   end
 
   def test_size_without_description_fails
-    size = FactoryGirl.build(:size, title: 'a title')
-    size.description = nil
-    before = Size.count
-    size.save
-    after  = Size.count
-    assert before == after
+    @size = FactoryGirl.build(:size, title: 'a title', description: nil)
+    refute @size.save
   end
 
   def test_size_with_description_saves
-    size = FactoryGirl.build(:size, title: 'a title')
-    before = Size.count
-    size.save
-    after  = Size.count
-    assert after == before + 1
+    @size = FactoryGirl.build(:size, title: 'a title', description: 'a description')
+    assert @size.save
   end
 
 end
