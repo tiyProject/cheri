@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
     @collection = Collection.find_by_id(product_params[:collection_id])
     if @collection
       # @products   = Product.all.order(:id)
-      @products  = @collection.products.all
+      @products  = @collection.products
       if @products
         render json: @products, include: [:styles, :sizes]
       else
