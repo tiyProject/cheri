@@ -19,8 +19,7 @@ class ProductsController < ApplicationController
   def show
     @product  = Product.find_by_id(product_params[:id])
     if @product
-      render json: @product
-      # , include: [:styles, :sizes]
+      render json: @product, include: ['sizes.styles']
     else
       render json: 'No such product id', status: 404
     end
