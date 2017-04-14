@@ -9,12 +9,23 @@ img {
 html {
     background-color: #EABEC9;
 }
+
+a:active {
+  outline-width: 1px;
+  outline-style: dashed;
+  outline-color: red;
+}
+
+audio { 
+   display:none;
+}
 .container{
     align-items: center;
 }
 .iAM{
     font-size: 25px;
     padding-bottom: 35px;
+    
 }
 
 .iAMField {
@@ -29,8 +40,8 @@ html {
 }
 
 .collectionImageBackground {
-    background: url(https://unsplash.it/600/900?random);
-    background-size: cover;
+    background: url(/img/overlayedit.png);
+    background-size: contain;
 }
 
 .collectionImage {
@@ -40,19 +51,19 @@ html {
 }
 
 .collectionImage:hover {
-    opacity: 0.5;
+    opacity: 0.25;
 }
 
-.collection1 {
+.collection0 {
     background-color: #F00314;
 }
-.collection2 {
+.collection1 {
     background-color: #6ACC8A;
 }
-.collection3 {
+.collection2 {
     background-color: #C44E00;
 }
-.collection4 {
+.collection3 {
     background-color: #A2D0D6;
 }
 
@@ -66,6 +77,13 @@ html {
     width: 175px;
 }
 
+.productImage {
+
+
+}
+
+
+
 .thumbNail {
     background: #ffffff;
     border: 1px solid #FAF9F5;
@@ -78,10 +96,7 @@ html {
 
 .frameRed{
     background-color: #F00314;
-    height: 320px;
-    width: 250px;
-    padding-left: 10px;
-    padding-top: 10px;
+    padding: 10px;
 }
 
 .previewCard{
@@ -108,6 +123,7 @@ html {
 .price {
     font-weight: bold;
     font-size: 22px;
+    padding-right: 5px;
 }
 
 

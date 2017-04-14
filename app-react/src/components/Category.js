@@ -4,7 +4,7 @@ import { browserHistory } from 'react-router';
 class Category extends Component {
   render() {
     return (
-      <div className="column is-one-quarter" title={this.props.title} onClick={() => browserHistory.push('/products/' + this.props.categoryId)}>
+      <div className="column is-one-quarter" title={this.props.title} onClick={() => browserHistory.push('/products/' + this.props.id)}>
         <div className="collectionImageBackground">
           <div className={"collectionImage " + this.props.className}>
             <img src={this.props.photo} alt={this.props.title} />

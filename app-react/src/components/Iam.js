@@ -2,23 +2,38 @@ import React, { Component } from 'react';
 
 
 class Iam extends Component {
+
+
+
+  
   render() {
     return (
-      <h1>this is where the I am enter box will load what the user types in and hide the form when entered</h1>
+      <nav className="nav">
+        <div className="nav-center">
+          <a className="nav-item iAM">
+            I am
+      </a>
+          <div className="field has-addons iAMField">
+            <p className="control">
+              <input className="input" type="text" placeholder="who are you ?" />
+            </p>
+          </div>
+        </div>
+      </nav>
     );
   }
 }
 
 export default Iam;
 
-//  <nav class="nav">
-//     <div class="nav-center">
-//       <a class="nav-item iAM">
+//  <nav className="nav">
+//     <div className="nav-center">
+//       <a className="nav-item iAM">
 //            I am 
 //       </a>
-//           <div class="field has-addons iAMField">
-//            <p class="control">
-//              <input class="input" type="text" placeholder="">
+//           <div className="field has-addons iAMField">
+//            <p className="control">
+//              <input className="input" type="text" placeholder="who are you ?">
 //           </p>
 //          </div> 
 //     </div>

@@ -1,10 +1,26 @@
 import React, { Component } from 'react';
-import Layout3 from 'Layout3';
+
 
 class Card extends Component {
+
   render() {
     return (
-      <h1>this is where the description/price of item selected will load</h1>
+      <div className="card">
+                    <header className="card-header">
+                        <p className="card-header-title">
+                          {this.props.title}
+                        </p>
+                    </header>
+                    <div className="card-content">
+                        <div className="content">
+                           {this.props.description}
+                        </div>
+                        <ul>
+                            <li className="inline"><em className="price"> ${this.props.price}</em></li>
+                            <li className="inline"><a className="button is-light purchase">I want it</a></li>
+                        </ul>
+                    </div>
+                </div>
     );
   }
 }

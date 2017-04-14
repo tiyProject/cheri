@@ -2,7 +2,7 @@
   "name": "app-react",
   "version": "0.1.0",
   "private": true,
-  "proxy-disabled": "http://localhost:3000",
+  "proxy": "http://localhost:3000",
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",

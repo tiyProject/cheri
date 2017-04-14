@@ -16,13 +16,13 @@ class Categories extends Component {
         fetch(window.apiHost + '/api/collections')
         .then(response => response.json())
         .then(response => this.setState({collections: response}))
+        .then(blah => console.log(this.state.collections))
     }
 
     render() {
-        const collections = this.state.collections.map((collection, index) => <Category className={"collection" + index} photo={collection.photo} title={collection.title} />)
+        const collections = this.state.collections.map((collection, index) => <Category key={index} className={"collection" + index} {...collection} />)
 
         return <div>
-            <h1>Welcome!</h1>
             <Iam />
             <div className="columns">
                 {collections}
