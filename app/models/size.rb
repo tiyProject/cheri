@@ -1,4 +1,5 @@
 class Size < ApplicationRecord
+  has_many   :styles
   belongs_to :product
   mount_uploader :photo, PhotoUploader
   mount_uploader :audio, AudioUploader
