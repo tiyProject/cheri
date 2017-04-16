@@ -5,9 +5,9 @@ class StyleImg extends Component {
         return (
             <div className="column is-one-third">
                 <div className="thumbNailStyle">
-                   
+                     <img className="stylesLoad" src={this.props.photo} /> 
                 </div>
-                <img className="stylesLoad" src={this.props.photo} /> 
+              
             </div>
         );
     }

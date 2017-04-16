@@ -24,7 +24,7 @@ class ProductView extends Component {
 
    
 
-  render() {
+  render() { console.log (this.state.product)
     return (
           <div className="previewCard">
         <div className="columns">
@@ -36,7 +36,7 @@ class ProductView extends Component {
 
                 <div className="thumbNailStyles is-hidden-tablet-only is-hidden-mobile">
                     <div className="columns is-multiline">
-                      <StyleImg photo={this.state.product.styles[0].photo}/>
+                      <StyleImg photo={this.state.product.sizes[0].photo}/>
                       <StyleImg photo={this.state.product.styles[0].photo}/>
                       <StyleImg photo={this.state.product.styles[0].photo}/>
                     </div>
@@ -47,7 +47,7 @@ class ProductView extends Component {
 
         <div className="thumbNailStyles is-hidden-desktop">
             <div className="columns is-multiline">
-                <StyleImg photo={this.state.product.styles[0].photo}/>
+                <StyleImg photo={this.state.product.sizes[0].photo}/>
                 <StyleImg photo={this.state.product.styles[0].photo}/>
                 <StyleImg photo={this.state.product.styles[0].photo}/>
             </div>
