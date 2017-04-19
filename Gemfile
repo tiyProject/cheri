@@ -45,6 +45,7 @@ gem 'stripe'
 gem 'factory_girl_rails', '~> 4.0'
 gem 'minitest'
 gem "letter_opener", :group => :development
+gem 'rails_12factor', group: :production
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

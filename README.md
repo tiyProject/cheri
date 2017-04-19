@@ -8,11 +8,14 @@
     MiniMagick		allows user to resize & crop images
     Fog			      upload images to AWS S3
     Rails-Admin		allows for http:basic authentication
-    Figaro			  for security keeps application.yml from being uploaded to GitHub
+    Figaro			  for security, keeps application.yml from being uploaded to GitHub
     Stripe			  handles payments
     Send-grid		  email
     Factory-Girl  create object to facilitate testing
     Letter-Opener view emails on screen
+
+* Gems not fully implemented
+    The backend portion for Stripe & Send-Grid are implemented, but due to time contsraints, not fully deployed.  Since Letter-Opener is dependent on SendGrid, it does not function.   Note that the HTML files are only there for reference, for future export to the front-end side.
 
 * Configuration
 
@@ -35,4 +38,4 @@
 /api/collections              collections#index  show all collections             		
 /api/collections/x            collections#show   show collection x
 /api/collections/x/products   products#index     show all products in collection x
-/api/collections/x/products/y products#show      show procuct y in collection x
+/api/products/y               products#show      show procuct y
