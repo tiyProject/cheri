@@ -4,8 +4,6 @@ import React, { Component } from 'react';
 class Card extends Component {
 
   render() {
-    const sizes = this.props.sizes.map((size, index) => <option key={size.id} value={index}>{size.title}</option>)
-
     return (
       <div className="card">
                     <header className="card-header">
@@ -17,14 +15,6 @@ class Card extends Component {
                         <div className="content">
                            {this.props.description}
                         </div>
-                        <p className="control">
-                          <span className="select is-fullwidth">
-                            <select className="" onChange={(e) => this.props.setCurrentSize(e.target.value)}>
-                              {sizes}
-                            </select>
-                          </span>
-                        </p><br/>
-
                         <ul>
                             <li className="inline"><em className="price"> ${this.props.price}</em></li>
                             <li className="inline"><a className="button is-light purchase">I want it</a></li>

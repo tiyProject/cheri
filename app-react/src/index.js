@@ -7,6 +7,7 @@ import ProductView from './pages/ProductView';
 import Categories from './pages/Categories';
 import Checkout from './pages/Checkout';
 import ThankYou from './pages/ThankYou';
+import Sizes from './pages/Sizes';
 
 
 window.apiHost = 'http://localhost:3000/';

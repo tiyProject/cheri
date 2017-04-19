@@ -1,35 +1,37 @@
-import React, { Component } from 'react';
-import { browserHistory } from 'react-router';
-import Layout2 from '../components/Layout2';
-import Product from '../components/Product';
-import Category from '../components/Category';
+// import React, { Component } from 'react';
+// import { browserHistory } from 'react-router';
+// import Iam from '../components/Iam';
 
-class Products extends Component {
-  constructor(props) {
-        super(props)
-        this.state = {
-            products : []
-        }
-    }
+// class Categories extends Component {
+//     constructor(props) {
+//         super(props)
+//         this.state = {
+//             collections: []
+//         }
+//     }
 
-    componentWillMount() {
-        fetch(window.apiHost + '/api/collections/' + this.props.params.collectionId + '/products')
-        .then(response => response.json())
-        .then(response => this.setState({products: response}))
-        .then(blah => console.log(this.state.products))
-    }
+//     componentWillMount() {
+//         fetch(window.apiHost + '/api/collections')
+//         .then(response => response.json())
+//         .then(response => this.setState({collections: response}))
+//         .then(blah => console.log(this.state.collections))
+//     }
 
-    render() {
-        const products = this.state.products.map((product, index) => <Product key={index}  {...product} />)
+//     render() {
+//         const collections = this.state.collections.map((collection, index) => <Category key={index} className={"collection" + index} {...collection} />)
 
-        return <div className="columns is-multiline">
-              {products}
-          </div>
-    }
-}
+//         return <div>
+//             <Iam />
+//             <div className="columns">
+//                 {collections}
+//             </div>
+//         </div>
+//     }
+// }
 
 
-export default Products;
+
+// export default Products;
 
 // div class="columns is-multiline is-mobile">
 //   <div class="column is-one-quarter">

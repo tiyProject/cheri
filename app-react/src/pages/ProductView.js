@@ -1,61 +1,90 @@
 import React, { Component } from 'react';
+import CarouselImg from '../components/CarouselImg';
 import BigImg from '../components/BigImg';
 import Card from '../components/Card';
 import StyleImg from '../components/StyleImg';
 
+window.audioPlayer = document.querySelector('#audioPlayer')
+
 class ProductView extends Component {
-  constructor(props) {
+    constructor(props) {
         super(props)
+        this.setCurrentSize = this.setCurrentSize.bind(this)
+
         this.state = {
-            product : {
-              audio: '',
-              sizes: [{photo:'',title:'',audio:'',description:'',price:''}],
-              styles: [{photo:''},{photo:''},{photo:''}],
+            currentSize: 0,
+            product: {
+                sizes: [{
+                    id: 0,
+                    title: '',
+                    photo: '',
+                    audio: '',
+                    description: '',
+                    styles: [{ photo: "" }, { photo: "" }]
+                }]
             }
         }
     }
 
     componentWillMount() {
         fetch(window.apiHost + '/api/products/' + this.props.params.productId)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .then(response => this.setState({product: response}))
+            .then(response => response.json())
+            // .then(response => console.log(response))
+            .then(response => this.setState({ product: response }))
+            .then(r => {
+                window.audioPlayer.pause()
+                // window.audioPlayer.src = this.state.product.sizes[0].audio
+                // window.audioPlayer.play()
+            })
     }
 
-   
+    setCurrentSize(index) {
+        this.setState({currentSize: index})
+    }
 
-  render() { console.log (this.state.product)
-    return (
-          <div className="previewCard">
-        <div className="columns">
-            <div className="column is-5">
-                <BigImg photo={this.state.product.sizes[0].photo} />
-            </div>
-            <div className="column is-7">
-                <Card title={this.state.product.sizes[0].title} description={this.state.product.sizes[0].description} price={this.state.product.price}/>
 
-                <div className="thumbNailStyles is-hidden-tablet-only is-hidden-mobile">
-                    <div className="columns is-multiline">
-                      <StyleImg photo={this.state.product.sizes[0].photo}/>
-                      <StyleImg photo={this.state.product.styles[0].photo}/>
-                      <StyleImg photo={this.state.product.styles[0].photo}/>
+    render() {
+        console.log(this.state.product)
+        const currentSize = this.state.product.sizes[this.state.currentSize]
+
+        return (
+            <div className="previewCard">
+                <div className="columns">
+                    <div className="column is-5">
+                        {currentSize.styles.length < 3 ?
+                            <CarouselImg photo={currentSize.photo} photoTwo={currentSize.styles[0] ? currentSize.styles[0].photo : ''} photoThree={currentSize.styles[1] ? currentSize.styles[1].photo : ''} /> :
+                            <BigImg photo={currentSize.photo} />
+                        }
+                    </div>
+                    <div className="column is-7">
+                        <Card title={currentSize.title} description={currentSize.description} price={this.state.product.price} setCurrentSize={this.setCurrentSize} sizes={this.state.product.sizes} />
+
+                        {currentSize.styles.length === 3 ?
+                            <div className="thumbNailStyles is-hidden-tablet-only is-hidden-mobile">
+                                <div className="columns is-multiline">
+                                    {currentSize.styles[0] ? <StyleImg photo={currentSize.styles[0].photo} /> : ''}
+                                    {currentSize.styles[1] ? <StyleImg photo={currentSize.styles[1].photo} /> : ''}
+                                    {currentSize.styles[2] ? <StyleImg photo={currentSize.styles[2].photo} /> : ''}
+                                </div>
+                            </div> :
+                            ''}
+
                     </div>
                 </div>
 
-            </div>
-        </div>
+                {currentSize.styles.length === 3 ?
+                    <div className="thumbNailStyles is-hidden-desktop">
+                        <div className="columns is-multiline">
+                            {currentSize.styles[0] ? <StyleImg photo={currentSize.styles[0].photo} /> : ''}
+                            {currentSize.styles[1] ? <StyleImg photo={currentSize.styles[1].photo} /> : ''}
+                            {currentSize.styles[2] ? <StyleImg photo={currentSize.styles[2].photo} /> : ''}
+                        </div>
+                    </div> :
+                    ''}
 
-        <div className="thumbNailStyles is-hidden-desktop">
-            <div className="columns is-multiline">
-                <StyleImg photo={this.state.product.sizes[0].photo}/>
-                <StyleImg photo={this.state.product.styles[0].photo}/>
-                <StyleImg photo={this.state.product.styles[0].photo}/>
             </div>
-        </div>
-
-    </div>
-    );
-  }
+        );
+    }
 }
 
 export default ProductView;

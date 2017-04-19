@@ -5,10 +5,10 @@
 img {
     width: 100%;
 }
-
+/*
 html {
     background-color: #EABEC9;
-}
+}*/
 
 a:active {
   outline-width: 1px;
@@ -32,6 +32,22 @@ audio {
     padding-top: 10px;
 }
 
+.welcome {
+    background-color: #F00314;
+}
+.wallpaper {
+   background-color: #A2D0D6; 
+}
+
+.siteInfo {
+    background-color: #6ACC8A;
+}
+
+.pastCollections {
+    background-color: #C44E00;
+}
+
+
 .titleImg {
     /*height: 316px;
     width: 211px;*/
@@ -45,7 +61,7 @@ audio {
 }
 
 .collectionImage {
-    padding: 50px 10px 200px 10px;
+    /*padding: 50px 10px 200px 10px;*/
     transition: all .3s ease;
     cursor: pointer;
 }
@@ -54,6 +70,26 @@ audio {
     opacity: 0.25;
 }
 
+.wallpaperImageBackground {
+    background: url(/img/overlayedit.png);
+    background-size: cover;
+    background-image: contain;
+}
+
+.wallpaperImage {
+     transition: all .3s ease;
+    cursor: pointer;
+    background-color: #6ACC8A;
+}
+
+.wallpaperImage:hover{
+     opacity: 0.25;
+}
+
+.enter{
+     background-color: #EABEC9;
+}
+/*
 .collection0 {
     background-color: #F00314;
 }
@@ -65,7 +101,34 @@ audio {
 }
 .collection3 {
     background-color: #A2D0D6;
+}*/
+
+.carousel {
+height: 100%;
+
 }
+
+.carousel-cell {
+  width: 66%;
+  height: 100%;
+  margin-right: 10px;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+/* cell number */
+.carousel-cell:before {  
+  display: block;
+  text-align: center;
+   content: counter(carousel-cell);
+}
+
+
+/* move page dots into carousel */
+.flickity-page-dots { 
+    bottom: 10px; 
+    }
+
 
 .productNav {
     padding-bottom: 10px;
@@ -111,6 +174,7 @@ audio {
 
 .styleLoadSpace {
     padding: 30px 30px 0 30px;
+    height: 1000px;
 }
 
 .styleLoad {
