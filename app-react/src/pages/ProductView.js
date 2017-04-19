@@ -3,6 +3,7 @@ import CarouselImg from '../components/CarouselImg';
 import BigImg from '../components/BigImg';
 import Card from '../components/Card';
 import StyleImg from '../components/StyleImg';
+import Iam from '../components/Iam';
 
 window.audioPlayer = document.querySelector('#audioPlayer')
 
@@ -48,40 +49,43 @@ class ProductView extends Component {
         const currentSize = this.state.product.sizes[this.state.currentSize]
 
         return (
-            <div className="previewCard">
-                <div className="columns">
-                    <div className="column is-5">
-                        {currentSize.styles.length < 3 ?
-                            <CarouselImg photo={currentSize.photo} photoTwo={currentSize.styles[0] ? currentSize.styles[0].photo : ''} photoThree={currentSize.styles[1] ? currentSize.styles[1].photo : ''} /> :
-                            <BigImg photo={currentSize.photo} />
-                        }
-                    </div>
-                    <div className="column is-7">
-                        <Card title={currentSize.title} description={currentSize.description} price={this.state.product.price} setCurrentSize={this.setCurrentSize} sizes={this.state.product.sizes} />
-
-                        {currentSize.styles.length === 3 ?
-                            <div className="thumbNailStyles is-hidden-tablet-only is-hidden-mobile">
-                                <div className="columns is-multiline">
-                                    {currentSize.styles[0] ? <StyleImg photo={currentSize.styles[0].photo} /> : ''}
-                                    {currentSize.styles[1] ? <StyleImg photo={currentSize.styles[1].photo} /> : ''}
-                                    {currentSize.styles[2] ? <StyleImg photo={currentSize.styles[2].photo} /> : ''}
-                                </div>
-                            </div> :
-                            ''}
-
-                    </div>
-                </div>
-
-                {currentSize.styles.length === 3 ?
-                    <div className="thumbNailStyles is-hidden-desktop">
-                        <div className="columns is-multiline">
-                            {currentSize.styles[0] ? <StyleImg photo={currentSize.styles[0].photo} /> : ''}
-                            {currentSize.styles[1] ? <StyleImg photo={currentSize.styles[1].photo} /> : ''}
-                            {currentSize.styles[2] ? <StyleImg photo={currentSize.styles[2].photo} /> : ''}
+            <div>
+                <Iam justLogo={true} />
+                <div className="previewCard">
+                    <div className="columns">
+                        <div className="column is-5">
+                            {currentSize.styles.length < 3 ?
+                                <CarouselImg photo={currentSize.photo} photoTwo={currentSize.styles[0] ? currentSize.styles[0].photo : ''} photoThree={currentSize.styles[1] ? currentSize.styles[1].photo : ''} /> :
+                                <BigImg photo={currentSize.photo} />
+                            }
                         </div>
-                    </div> :
-                    ''}
+                        <div className="column is-7">
+                            <Card title={currentSize.title} description={currentSize.description} price={this.state.product.price} setCurrentSize={this.setCurrentSize} sizes={this.state.product.sizes} />
 
+                            {currentSize.styles.length === 3 ?
+                                <div className="thumbNailStyles is-hidden-tablet-only is-hidden-mobile">
+                                    <div className="columns is-multiline">
+                                        {currentSize.styles[0] ? <StyleImg photo={currentSize.styles[0].photo} /> : ''}
+                                        {currentSize.styles[1] ? <StyleImg photo={currentSize.styles[1].photo} /> : ''}
+                                        {currentSize.styles[2] ? <StyleImg photo={currentSize.styles[2].photo} /> : ''}
+                                    </div>
+                                </div> :
+                                ''}
+
+                        </div>
+                    </div>
+
+                    {currentSize.styles.length === 3 ?
+                        <div className="thumbNailStyles is-hidden-desktop">
+                            <div className="columns is-multiline">
+                                {currentSize.styles[0] ? <StyleImg photo={currentSize.styles[0].photo} /> : ''}
+                                {currentSize.styles[1] ? <StyleImg photo={currentSize.styles[1].photo} /> : ''}
+                                {currentSize.styles[2] ? <StyleImg photo={currentSize.styles[2].photo} /> : ''}
+                            </div>
+                        </div> :
+                        ''}
+
+                </div>
             </div>
         );
     }
