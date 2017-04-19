@@ -67,7 +67,7 @@ class Categories extends Component {
                 
                         <div className="content collectionImageBackground">
                             <div className="collectionImage">
-                            <Category photo={this.state.collections[0].photo} id={this.state.collections[0].products[0].id}/>
+                                <Category photo={this.state.collections[0].photo} id={this.state.collections[0].products[0].id}/>
 
                             </div>
 
