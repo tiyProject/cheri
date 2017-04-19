@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 20170414164918) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id",    null: false
+  end
+
   create_table "orders", force: :cascade do |t|
     t.string   "firstname"
     t.string   "lastname"
@@ -67,6 +74,24 @@ ActiveRecord::Schema.define(version: 20170414164918) do
     t.integer  "size_id"
     t.string   "audio"
     t.index ["size_id"], name: "index_styles_on_size_id", using: :btree
+  end
+
+  create_table "todos", force: :cascade do |t|
+    t.text     "todo"
+    t.text     "completed"
+    t.text     "category"
+    t.datetime "due_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.text     "name"
+    t.text     "username"
+    t.text     "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "photo_url"
   end
 
   add_foreign_key "orders", "products"
