@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'collections#index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   scope 'api' do
     resources :collections, only: [:show, :index] do
@@ -6,7 +7,6 @@ Rails.application.routes.draw do
     end
     resources :products,  only: [:show]
     resources :orders,    only: [:create, :demo]
-    post "/demo" => 'orders#demo', as: :demo
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
