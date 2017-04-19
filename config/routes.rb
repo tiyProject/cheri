@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  root 'collections#index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   scope 'api' do
     resources :collections, only: [:show, :index] do
