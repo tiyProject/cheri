@@ -18,6 +18,9 @@ class Iam extends React.Component {
         if (event.key === 'Enter') {
             this.setState({ showLogo: true });
         }
+        else if (event.key === 'Enter') {
+            this.setState({ showLogoAndArrow: true });
+        }
     }
 
     handleChange(event) {
@@ -40,10 +43,11 @@ class Iam extends React.Component {
                                 :
                                 <span>
                                     <span className="iAM">I am &nbsp;</span>
-                                    <span className="iAM">{this.state.value} &nbsp;</span>
+                                    <span className="iAM">{this.state.value} &nbsp; ,</span>
                                     <span className="iAM">I am &nbsp;</span>
                                     <img src="/img/cherilogo.gif" className="iAMLogo" alt="Chéri" />
                                 </span>
+                              
                             }
                         </div>
                     }

@@ -8,7 +8,7 @@ class Category extends Component {
     <article className="tile is-child notification enter">
           <div className="content">
             <p className="title">Enter Site Demo Here</p>
-            <div className="content collectionImageBackground">
+            <div className="content">
               <div className={"collectionImage" + this.props.className}>
                 <img src={this.props.photo} alt={this.props.title} />
               </div>

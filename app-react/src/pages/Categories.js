@@ -4,6 +4,8 @@ import Layout1 from '../components/Layout1';
 import Category from '../components/Category';
 import Iam from '../components/Iam';
 
+window.audioPlayer = document.querySelector('#audioPlayer')
+
 class Categories extends Component {
     constructor(props) {
         super(props)
@@ -22,8 +24,13 @@ class Categories extends Component {
     render() {
         // const collections = this.state.collections.map((collection, index) => <Category key={index} className={"collection" + index} {...collection} />)
 
+        window.audioPlayer.pause()
+        window.audioPlayer.src = '/audio/LonelyLover.mp3'
+        window.audioPlayer.play()
+
         return <div>
             <Iam />
+            <div className="container">
             <div className="tile is-ancestor">
                 <div className="tile is-vertical is-8">
                     <div className="tile">
@@ -75,7 +82,7 @@ class Categories extends Component {
                     </div>
                 </div>  
               
-           
+           </div>
      
     }
 }
