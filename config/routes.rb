@@ -6,7 +6,6 @@ Rails.application.routes.draw do
     end
     resources :products,  only: [:show]
     resources :orders,    only: [:create, :demo]
-    post "/demo" => 'orders#demo', as: :demo
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
