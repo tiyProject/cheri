@@ -11,3 +11,4 @@ class Store extends Component {
 }
 
 export default Store;
+

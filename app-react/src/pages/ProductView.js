@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 import CarouselImg from '../components/CarouselImg';
 import BigImg from '../components/BigImg';
 import Card from '../components/Card';
@@ -34,13 +35,16 @@ class ProductView extends Component {
             .then(response => this.setState({ product: response }))
             .then(r => {
                 window.audioPlayer.pause()
-                // window.audioPlayer.src = this.state.product.sizes[0].audio
-                // window.audioPlayer.play()
+                window.audioPlayer.src = this.state.product.sizes[0].audio
+                window.audioPlayer.play()
             })
     }
 
     setCurrentSize(index) {
         this.setState({currentSize: index})
+        window.audioPlayer.pause()
+        window.audioPlayer.src = this.state.product.sizes[index].audio
+        window.audioPlayer.play()
     }
 
 
@@ -53,7 +57,7 @@ class ProductView extends Component {
                 <Iam justLogo={true} />
                 <div className="previewCard">
                     <div className="columns">
-                        <div className="column is-5">
+                        <div className="column is-4">
                             {currentSize.styles.length < 3 ?
                                 <CarouselImg photo={currentSize.photo} photoTwo={currentSize.styles[0] ? currentSize.styles[0].photo : ''} photoThree={currentSize.styles[1] ? currentSize.styles[1].photo : ''} /> :
                                 <BigImg photo={currentSize.photo} />
@@ -71,7 +75,13 @@ class ProductView extends Component {
                                     </div>
                                 </div> :
                                 ''}
-
+                        
+                        </div>
+                        <div className="column is-1 navColumn">
+                    
+                        <div className="pageNavOne"><i className="fa fa-forward fa-3x fa-border" aria-hidden="false" onClick={() => browserHistory.push('/products/')}></i></div>
+                        
+                        
                         </div>
                     </div>
 
