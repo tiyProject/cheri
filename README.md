@@ -15,7 +15,7 @@
     Letter-Opener view emails on screen
 
 * Gems not fully implemented
-    The backend portion for Stripe & Send-Grid are implemented, but due to time contsraints, not fully deployed.  Since Letter-Opener is dependent on SendGrid, it does not function.   Note that the HTML files are only there for reference, for future export to the front-end side.
+    The backend portion for Stripe & Send-Grid are implemented, but due to time contsraints, not fully deployed.  Since Letter-Opener is dependent on SendGrid, it does not function.   Note that the HTML files are only there for reference, for future use.
 
 * Configuration
 
@@ -27,7 +27,6 @@
     localhost:3000/admin  #user & pass by request
 
 * How to run the test suite
-    rails db:seed  #create some database entries
     rails test     #currently no tests available
 
 * Services (job queues, cache servers, search engines, etc.)
