@@ -17,14 +17,13 @@ class Card extends Component {
                         <div className="content">
                            {this.props.description}
                         </div>
-                        {sizes.length > 1 ?
                         <p className="control">
                           <span className="select is-fullwidth">
                             <select className="" onChange={(e) => this.props.setCurrentSize(e.target.value)}>
                               {sizes}
                             </select>
                           </span>
-                        </p> : ''}<br />
+                        </p><br/>
 
                         <ul>
                             <li className="inline"><em className="price"> ${this.props.price}</em></li>

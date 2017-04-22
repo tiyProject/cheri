@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CarouselImg from '../components/CarouselImg';
 import Card from '../components/Card';
 import Size from '../components/Size';
-import Checkbox from '../components/Checkbox';
+
 
 
 class Sizes extends Component {

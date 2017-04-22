@@ -18,9 +18,9 @@ class Iam extends React.Component {
         if (event.key === 'Enter') {
             this.setState({ showLogo: true });
         }
-        // else if (event.key === 'Enter') {
-        //     this.setState({ showLogoAndArrow: true });
-        // }
+        else if (event.key === 'Enter') {
+            this.setState({ showLogoAndArrow: true });
+        }
     }
 
     handleChange(event) {
