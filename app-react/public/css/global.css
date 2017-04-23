@@ -24,7 +24,12 @@ audio {
 }*/
 .iAM{
     font-size: 25px;
+    font-variant: small-caps;
 }
+ ::-webkit-input-placeholder {
+   
+   
+ }
 
 .iAMLogo {
     width: 140px;
@@ -63,11 +68,72 @@ audio {
     width: initial;
 }
 
+ .infoTitle {
+     font-size: 18px;
+ }
+
+ .subtitleInfo {
+     font-variant: small-caps;
+ }
+
+.italic {
+    font-style: italic;
+    font-size: 24px;
+}
+.infomation{  
+font-variant: small-caps;
+/*text-shadow: 2px 4px 10px red;*/
+text-align: center;
+
+}
+.you {
+    text-decoration: underline;  
+}
+
 .welcome {
     background-color: #F00314;
+    /*background: url(/img/top.png);*/
+    /*background-size: cover;
+    background-image: contain;
+    background-repeat: no-repeat; */
+    min-height: 220px;
 }
+
+.topImg {
+    /*padding-left: 18px;*/
+    height: 100px;
+    min-width: 290px;
+}
+.bottomImg{
+height: 100px;
+}
+.enterDemo{
+    min-height: 60px;
+    min-width: 350px;
+   padding-top: 20px;
+   padding-left: 20px;
+
+}
+.title strong {
+     font-variant: small-caps;
+     text-shadow: 25px; 
+     /*line-height: 2.5;*/
+    padding-left: 19px;
+}
+.title {
+    color: #363636;
+    font-variant: small-caps;
+    /*font-size: 2rem;*/
+    font-weight: 300;
+    line-height: 1.125;
+}
+
 .wallpaper {
    background-color: #A2D0D6; 
+     /*background: url(/img/bottom.png);*/
+    background-size: cover;
+    background-image: contain;
+    background-repeat: no-repeat;
 }
 
 .siteInfo {
@@ -88,7 +154,7 @@ audio {
 }
 
 .collectionImageBackground {
-    background: url(/img/overlayedit.png);
+    background: url(/img/overlayedit2.png);
     background-size: contain;
 }
 
@@ -104,10 +170,11 @@ audio {
 }
 
 .wallpaperImageBackground {
-    background: url(/img/wall1.png);
+    background: url(/img/wall2.png);
     background-size: cover;
     background-image: contain;
     background-repeat: no-repeat;
+    max-height: 400px;
      
 }
 
@@ -115,7 +182,7 @@ audio {
      transition: all .3s ease;
     cursor: pointer;
     background-color: #6ACC8A;
-    min-height: 370px;
+    min-height: 400px;
 }
 
 .wallpaperImage:hover{
@@ -133,6 +200,10 @@ audio {
 .header {
     color: white;
 }
+
+.pastCollect {
+
+}
 /*
 .collection0 {
     background-color: #F00314;
@@ -146,10 +217,19 @@ audio {
 .collection3 {
     background-color: #A2D0D6;
 }*/
-
+.carouselFirst {
+    height: 100%;
+}
 .carousel {
 height: 100%;
 
+}
+.carouselCell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
 }
 
 .carousel-cell {
@@ -271,8 +351,18 @@ height: 100%;
 
 .container {
     max-width: 960px;
+    padding-right: 40px;
+  
 }
 
 .scoot {
     margin-left: -20px;
+}
+.footerLogo {
+    max-width: 500px;
+    min-height: 100px;
+}
+.footer {
+    background-color: white;
+    height: 270px;
 }

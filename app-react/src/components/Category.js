@@ -5,7 +5,7 @@ class Category extends Component {
   render() {
     return (
       <div title={this.props.title} onClick={() => browserHistory.push('/product/' + this.props.id)}>
-        <p className="title">Enter Site Demo Here</p>
+        <p className="title"> <img className="enterDemo" src="/img/enterDemo4.png"/> </p>
         <div title={this.props.title} className={"collectionImage" + this.props.className} style={{backgroundImage: 'url(' + this.props.photo + ')', backgroundSize: 'cover', height: '60vw'}}>
         </div>
       </div>
