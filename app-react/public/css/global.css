@@ -204,19 +204,23 @@ height: 100px;
 .pastCollect {
 
 }
-/*
-.collection0 {
-    background-color: #F00314;
-}
-.collection1 {
-    background-color: #6ACC8A;
-}
-.collection2 {
+
+.collectionImagecollection0 {
     background-color: #C44E00;
+    padding: 10px;
 }
-.collection3 {
+.collectionImagecollection1 {
+    background-color: #6ACC8A;
+     padding: 10px;
+}
+.collectionImagecollection2 {
+     background-color: #F00314;
+     padding: 10px;
+}
+.collectionImagecollection3 {
     background-color: #A2D0D6;
-}*/
+     padding: 10px;
+}
 .carouselFirst {
     height: 100%;
 }
@@ -294,18 +298,24 @@ height: 100%;
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgba(0,0,0,0.15);
     min-height: 300px;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     max-width: 230px;
 }
 
-.frameRed{
+/*.frameRed{
     background-color: #F00314;
     padding: 10px;
-}
+}*/
 
 .previewCard{
    background-color: #EABEC9;
    margin: 20px;
+}
+.thankYouCard {
+   
+    background-color:#A2D0D6;
+     margin: 100px;
+
 }
 
 .card {
@@ -315,11 +325,11 @@ height: 100%;
 
 .styleLoadSpace {
     padding: 30px 30px 0 30px;
-    height: 1000px;
+    height: 500px;
 }
 
-.styleLoad {
-    background: #ffffff;
+.stylesLoad {
+    /*background: #ffffff;*/
     border: 1px solid #FAF9F5;
     border-radius: 4px;
     box-shadow: 9px 4px 6px 6px rgba(0,0,0,0.15);
@@ -337,7 +347,7 @@ height: 100%;
 }
 
 .thumbNailStyles {
-    padding: 20px;
+    /*padding: 20px;*/
 }
 
 .thumbNailStyle {
@@ -346,7 +356,7 @@ height: 100%;
     border-radius: 4px;
     box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.15);
     min-height: 320px;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 
 .container {
@@ -354,6 +364,20 @@ height: 100%;
     padding-right: 40px;
   
 }
+.backButton {
+    left: 290px;
+    font-variant: small-caps;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+    min-height: 15px;
+    padding-top: 15px;
+}
+button.button, input[type="submit"].button {
+    line-height: .5;
+    padding-bottom: 0.4em;
+    padding-top: 0.35em;
+}
+
 
 .scoot {
     margin-left: -20px;
@@ -365,4 +389,8 @@ height: 100%;
 .footer {
     background-color: white;
     height: 270px;
+}
+
+.caps {
+   font-variant: small-caps; 
 }

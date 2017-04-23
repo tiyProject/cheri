@@ -88,7 +88,8 @@ class Categories extends Component {
                     <div className="container">
                     <div className="content has-text-centered">
                     <p>
-                    <img className="footerLogo" src='/img/footerLogo.jpg'/>
+                    <img className="footerLogo" src='/img/footerLogo.jpg'/><br/>
+                    <p className="caps"> ~an Iron Yard final project 2017 powered by the Back End magic of Rob Taylor~ </p>
                     </p>
                     </div>
                     </div>

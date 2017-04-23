@@ -38,55 +38,37 @@ class Checkout extends Component {
             </div>
           </div>
             <div className="column is-half">
-              <div className="frameRed">
-                <div className="order">
-                  <header className="card-header">
-                    <p className="card-header-title">
-                      {this.props.title}
-                    </p>
-                  </header>
+              
+                 
                   <div className="field">
-                    <label className="label">Name</label>
+                    <label className="label">First Name</label>
                     <p className="control">
-                      <input className="input" type="text" placeholder="Text input" />
+                      <input className="input" type="text" placeholder="ex. Bridget" />
                     </p>
                   </div>
 
                   <div className="field">
-                    <label className="label">Username</label>
-                    <p className="control has-icons-left has-icons-right">
-                      <input className="input is-success" type="text" placeholder="Text input" value="bulma" />
-                      <span className="icon is-small is-left">
-                        <i className="fa fa-user"></i>
-                      </span>
-                      <span className="icon is-small is-right">
-                        <i className="fa fa-check"></i>
-                      </span>
+                    <label className="label">Last Name</label>
+                    <p className="control">
+                      <input className="input" type="text" placeholder="ex. Bardot" />
                     </p>
-                    <p className="help is-success">This username is available</p>
                   </div>
 
                   <div className="field">
                     <label className="label">Email</label>
-                    <p className="control has-icons-left has-icons-right">
-                      <input className="input is-danger" type="text" placeholder="Email input" value="hello@" />
-                      <span className="icon is-small is-left">
-                        <i className="fa fa-envelope"></i>
-                      </span>
-                      <span className="icon is-small is-right">
-                        <i className="fa fa-warning"></i>
-                      </span>
-                    </p>
-                    <p className="help is-danger">This email is invalid</p>
+                      <input className="input" type="text" placeholder="Email input" value="" />
                   </div>
 
                   <div className="field">
-                    <label className="label">Subject</label>
+                    <label className="label">Emoji</label>
                     <p className="control">
                       <span className="select">
                         <select>
-                          <option>Select dropdown</option>
-                          <option>With options</option>
+                          <option>Select</option>
+                          <option>✨</option>
+                          <option>😇</option>
+                           <option>💅</option>
+                            <option>🍟</option>
                         </select>
                       </span>
                     </p>
@@ -95,7 +77,7 @@ class Checkout extends Component {
                   <div className="field">
                     <label className="label">Message</label>
                     <p className="control">
-                      <textarea className="textarea" placeholder="Textarea"></textarea>
+                      <textarea className="textarea" placeholder="talented, brilliant, incredible, amazing, show stopping, spectacular, never the same, totally unique, completely not ever been done before, unafraid to reference or not reference, put it in a blender"></textarea>
                     </p>
                   </div>
 
@@ -103,7 +85,7 @@ class Checkout extends Component {
                     <p className="control">
                       <label className="checkbox">
                         <input type="checkbox" />
-                        I agree to the <a href="#">terms and conditions</a>
+                        Pls send me Emails 
                       </label>
                     </p>
                   </div>
@@ -112,18 +94,18 @@ class Checkout extends Component {
                     <p className="control">
                       <label className="radio">
                         <input type="radio" name="question" />
-                        Yes
-    </label>
+                        Yas
+                      </label>
                       <label className="radio">
                         <input type="radio" name="question" />
-                        No
-    </label>
+                      Gaga
+                      </label>
                     </p>
                   </div>
 
                   <div className="field is-grouped">
                     <p className="control">
-                      <button className="button is-primary" onClick={() => browserHistory.push('/')}>Submit</button>
+                      <button className="button is-primary" onClick={() => browserHistory.push('/ThankYou/')}>Submit</button>
                     </p>
                     <p className="control">
                       <button className="button is-link" onClick={() => browserHistory.push('/products/')} >Cancel</button>
@@ -134,9 +116,8 @@ class Checkout extends Component {
               </div>
             </div>
           </div>
-          </div>
-       
-   </div>
+        
+  
     
     
   }

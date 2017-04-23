@@ -7,6 +7,7 @@ import ProductView from './pages/ProductView';
 import Categories from './pages/Categories';
 import Checkout from './pages/Checkout';
 import Sizes from './components/Sizes';
+import ThankYou from './pages/ThankYou';
 
 
 window.apiHost = 'https://agile-lowlands-46592.herokuapp.com/';
@@ -18,6 +19,7 @@ ReactDOM.render(
       <Route path="products/" component={Products} />
        <Route path="product/checkout/:collectionId" component={Checkout} />
       <Route path="product/:productId" component={ProductView} />
+      <Route path="ThankYou/" component={ThankYou}/>
     </Route>
   </Router>,
   document.getElementById('root')
