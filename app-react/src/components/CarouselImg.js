@@ -15,10 +15,10 @@ componentDidMount() {
   render() {
     return (
       <div className="styleLoadSpace">
-      <div className="carousel" ref={(divi) => { this.carousel = divi; }}>
-        <div className="carousel-cell"><img className="stylesLoad" src={this.props.photo} /> </div>
-        {this.props.photoTwo ? <div className="carousel-cell"><img className="stylesLoad" src={this.props.photoTwo} /> </div> : ''}
-        {this.props.photoThree ? <div className="carousel-cell"><img className="stylesLoad" src={this.props.photoThree} /> </div> : ''}
+      <div tabIndex="0" className="carousel" ref={(divi) => { this.carousel = divi; }}>
+        <div tabIndex="0" className="carousel-cell"><img className="stylesLoad" src={this.props.photo} alt={this.props.title} /> </div>
+        {this.props.photoTwo ? <div tabIndex="0" className="carousel-cell"><img className="stylesLoad" src={this.props.photoTwo} alt={this.props.title}/> </div> : ''}
+        {this.props.photoThree ? <div tabIndex="0" className="carousel-cell"><img className="stylesLoad" src={this.props.photoThree} alt={this.props.title}/> </div> : ''}
       </div>
       </div>
     );

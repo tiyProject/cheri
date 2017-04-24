@@ -81,7 +81,7 @@ class ProductView extends Component {
                     <div className="columns">
                         <div className="column is-4">
                             {currentSize.styles.length < 3 ?
-                                <CarouselImg photo={currentSize.photo} photoTwo={currentSize.styles[0] ? currentSize.styles[0].photo : ''} photoThree={currentSize.styles[1] ? currentSize.styles[1].photo : ''} /> :
+                                <CarouselImg tabIndex="0" photo={currentSize.photo} photoTwo={currentSize.styles[0] ? currentSize.styles[0].photo : ''} photoThree={currentSize.styles[1] ? currentSize.styles[1].photo : ''} /> :
                                 <BigImg photo={currentSize.photo} />
                             }
                         </div>
@@ -103,9 +103,9 @@ class ProductView extends Component {
                     
                         <div className="pageNavOne">
                             {this.props.params.productId < 2 ?
-                                <i className="fa fa-forward fa-3x fa-border" aria-hidden="false" onClick={() => browserHistory.push('/product/' + (Number(this.props.params.productId)+ 1))}></i>
+                                <i tabIndex="0" className="fa fa-forward fa-3x fa-border" aria-hidden="false" onClick={() => browserHistory.push('/product/' + (Number(this.props.params.productId)+ 1))}></i>
                             :
-                                <i className="fa fa-forward fa-3x fa-border" aria-hidden="false" onClick={() => browserHistory.push('/products/')}></i>
+                                <i tabIndex="0" className="fa fa-forward fa-3x fa-border" aria-hidden="false" onClick={() => browserHistory.push('/products/')}></i>
                             }
                         </div>
                      </div>

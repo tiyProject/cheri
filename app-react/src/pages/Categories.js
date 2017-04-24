@@ -76,7 +76,7 @@ class Categories extends Component {
                     <div className="title is-parent">
                         <article className="title is-child">
                                 <div className="content enter">
-                                    <article className="tile is-child notification collectionImageBackground">
+                                    <article tabIndex="0" className="tile is-child notification collectionImageBackground">
                                         <Category photo={this.state.collections[0].photo} id={this.state.collections[0].products[0].id} />
                                     </article>
                                 </div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CarouselImg from '../components/CarouselImg';
 import Card from '../components/Card';
-import Size from '../components/Size';
+
 
 
 
@@ -53,7 +53,7 @@ class Sizes extends Component {
           <div className="previewCard">
         <div className="columns">
             <div className="column is-5">
-                    <CarouselImg photo={this.state.selected_size.photo} photoTwo={this.state.selected_size.styles[0].photo} photoThree={this.state.selected_size.styles[1].photo} />  
+                    <CarouselImg photo={this.state.selected_size.photo} alt={this.props.title} photoTwo={this.state.selected_size.styles[0].photo} alt={this.props.title} photoThree={this.state.selected_size.styles[1].photo} alt={this.props.title}/>  
                 
             </div>
             <div className="column is-7">

@@ -32,7 +32,7 @@ class Checkout extends Component {
         <div className="columns">
           <div className="column is-half">
             <div className="frameRed">
-              <div className="orderImage">
+              <div className="orderImage" role="button">
                 <Sale className={"collection" + (this.props.params.collectionId - 1)} {...(this.state.collections.length > 0 ? this.state.collections[this.props.params.collectionId] : {})} />
               </div>
             </div>
@@ -40,75 +40,89 @@ class Checkout extends Component {
             <div className="column is-half">
               
                  
-                  <div className="field">
-                    <label className="label">First Name</label>
+                  <div tabIndex="0" className="field">
+                    <label htmlFor="name" className="sr-only">
+                        First Name
+                        </label>
+                        First Name
                     <p className="control">
-                      <input className="input" type="text" placeholder="ex. Bridget" />
+                      <input tabIndex="0" className="input" id="name" type="text" placeholder="ex. Bridget" />
                     </p>
                   </div>
 
-                  <div className="field">
-                    <label className="label">Last Name</label>
+                  <div tabIndex="0" className="field">
+                    <label htmlFor="lastname" className="sr-only">
+                        Last Name
+                        </label>
+                        Last Name
                     <p className="control">
-                      <input className="input" type="text" placeholder="ex. Bardot" />
+                      <input tabIndex="0" className="input" id="lastname"  type="text" placeholder="ex. Bardot" />
                     </p>
                   </div>
 
-                  <div className="field">
-                    <label className="label">Email</label>
-                      <input className="input" type="text" placeholder="Email input" value="" />
+                  <div tabIndex="0" className="field">
+                    <label htmlFor="email" className="sr-only">
+                        Email
+                        </label>
+                        Email
+                    <p className="control">
+                      <input tabIndex="0" className="input" id="email" type="text" placeholder="Email input" value="" />
+                       </p>
                   </div>
+                 
 
-                  <div className="field">
+                  <div tabIndex="0" className="field">
                     <label className="label">Emoji</label>
                     <p className="control">
-                      <span className="select">
+                      <span className="select" role="button">
                         <select>
-                          <option>Select</option>
-                          <option>✨</option>
-                          <option>😇</option>
-                           <option>💅</option>
-                            <option>🍟</option>
+                          <option tabIndex="0">Select</option>
+                          <option tabIndex="0">✨</option>
+                          <option tabIndex="0">😇</option>
+                           <option tabIndex="0">💅</option>
+                            <option tabIndex="0">🍟</option>
                         </select>
                       </span>
                     </p>
                   </div>
 
-                  <div className="field">
-                    <label className="label">Message</label>
+                  <div tabIndex="0" className="field">
+                    <label htmlFor="message" className="sr-only">
+                        Message
+                        </label>
                     <p className="control">
-                      <textarea className="textarea" placeholder="talented, brilliant, incredible, amazing, show stopping, spectacular, never the same, totally unique, completely not ever been done before, unafraid to reference or not reference, put it in a blender"></textarea>
+                      <textarea tabIndex="0" className="textarea" id="message" placeholder="talented, brilliant, incredible, amazing, show stopping, spectacular, never the same, totally unique, completely not ever been done before, unafraid to reference or not reference, put it in a blender"></textarea>
                     </p>
                   </div>
 
-                  <div className="field">
+                  <div tabIndex="0" className="field">
                     <p className="control">
-                      <label className="checkbox">
-                        <input type="checkbox" />
+                      <label htmlFor="checkbox" className="checkbox">
+                        <input tabIndex="0" type="checkbox" id="checkbox" />
                         Pls send me Emails 
                       </label>
                     </p>
                   </div>
 
-                  <div className="field">
+                  <div tabIndex="0" className="field">
                     <p className="control">
-                      <label className="radio">
-                        <input type="radio" name="question" />
+                      <label htmlFor="yas" className="radio">
+                        <input tabIndex="0" type="radio" name="question" id="yas" role="button"/>
                         Yas
                       </label>
-                      <label className="radio">
-                        <input type="radio" name="question" />
+                      <label htmlFor="gaga" className="radio">
+                        <input tabIndex="0" type="radio" name="question" id="gaga" role="button" />
                       Gaga
                       </label>
                     </p>
                   </div>
 
-                  <div className="field is-grouped">
+                  <div tabIndex="0" className="field is-grouped">
                     <p className="control">
-                      <button className="button is-primary" onClick={() => browserHistory.push('/ThankYou/')}>Submit</button>
+                      <button tabIndex="0" className="button is-primary" role="button" onClick={() => browserHistory.push('/ThankYou/')}>Submit</button>
                     </p>
                     <p className="control">
-                      <button className="button is-link" onClick={() => browserHistory.push('/products/')} >Cancel</button>
+                      <button tabIndex="0" className="button is-link" role="button" onClick={() => browserHistory.push('/products/')} >Cancel</button>
                     </p>
                   </div>
 

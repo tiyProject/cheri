@@ -9,7 +9,7 @@ class ThankYou extends Component {
             <div className="thankYouCard">
                 <img src='/img/cherilogo.gif' />
                 <img src='/img/thanks.png' /><br/><br/>
-                 <button className="button backButton" onClick={() => browserHistory.push('/')}>Return to Site<br/>✨</button>
+                 <button tabIndex="0" className="button backButton" role="button" onClick={() => browserHistory.push('/')}>Return to Site<br/>✨</button>
             </div>
            
 

@@ -20,7 +20,7 @@ class Card extends Component {
                         {sizes.length > 1 ?
                         <p className="control">
                           <span className="select is-fullwidth">
-                            <select className="" onChange={(e) => this.props.setCurrentSize(e.target.value)}>
+                            <select tabIndex="0" className="" onChange={(e) => this.props.setCurrentSize(e.target.value)}>
                               {sizes}
                             </select>
                           </span>
@@ -28,7 +28,7 @@ class Card extends Component {
 
                         <ul>
                             <li className="inline"><em className="price"> ${this.props.price}</em></li>
-                            <li className="inline"><a className="button is-light purchase">I want it</a></li>
+                            <li tabIndex="0" className="inline"><a tabIndex="0" className="button is-light purchase">I want it</a></li>
                         </ul>
                     </div>
                 </div>

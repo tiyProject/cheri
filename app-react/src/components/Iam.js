@@ -38,7 +38,7 @@ class Iam extends React.Component {
                             {this.state.showLogo === false ?
                                 <span>
                                     <span className="iAM">I am &nbsp;</span>
-                                    <input className="input iAMInput" type="text" placeholder="who are you ?" value={this.state.value} onKeyPress={this.handleEnter} onChange={this.handleChange} />
+                                    <input className="input iAMInput" id="iAm" type="text" placeholder="who are you ?" value={this.state.value} onKeyPress={this.handleEnter} onChange={this.handleChange} />
                                 </span>
                                 :
                                 <span>
@@ -59,6 +59,10 @@ class Iam extends React.Component {
 
 
 export default Iam;
+
+//  <label htmlFor="iAm" className="sr-only">
+//    who are you ? interact with Chéri 
+//    </label>
 
 //  <nav className="nav">
 //     <div className="nav-center">

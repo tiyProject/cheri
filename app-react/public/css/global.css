@@ -107,13 +107,17 @@ text-align: center;
 .bottomImg{
 height: 100px;
 }
+.collectionImageundefined {
+ cursor: pointer;
+}
 .enterDemo{
     min-height: 60px;
     min-width: 350px;
    padding-top: 20px;
    padding-left: 20px;
-
+    cursor: pointer;
 }
+
 .title strong {
      font-variant: small-caps;
      text-shadow: 25px; 
@@ -208,18 +212,22 @@ height: 100px;
 .collectionImagecollection0 {
     background-color: #C44E00;
     padding: 10px;
+    cursor: pointer;
 }
 .collectionImagecollection1 {
     background-color: #6ACC8A;
      padding: 10px;
+     cursor: pointer;
 }
 .collectionImagecollection2 {
      background-color: #F00314;
      padding: 10px;
+     cursor: pointer;
 }
 .collectionImagecollection3 {
     background-color: #A2D0D6;
      padding: 10px;
+     cursor: pointer;
 }
 .carouselFirst {
     height: 100%;
@@ -234,6 +242,7 @@ height: 100%;
   margin-right: 10px;
   background: #8C8;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .carousel-cell {
@@ -249,6 +258,7 @@ height: 100%;
 .carousel-cell:before {  
   display: block;
   text-align: center;
+  cursor: pointer;
    /*content: counter(carousel-cell);*/
 }
 
@@ -326,6 +336,7 @@ height: 100%;
 .styleLoadSpace {
     padding: 30px 30px 0 30px;
     height: 500px;
+     cursor: pointer;
 }
 
 .stylesLoad {
@@ -333,6 +344,7 @@ height: 100%;
     border: 1px solid #FAF9F5;
     border-radius: 4px;
     box-shadow: 9px 4px 6px 6px rgba(0,0,0,0.15);
+     cursor: pointer;
 }
 
 .price {
