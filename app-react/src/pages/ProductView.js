@@ -29,15 +29,14 @@ class ProductView extends Component {
     }
 
     componentWillMount() {
-        fetch(window.apiHost + '/api/products/' + this.props.params.productId)
-            .then(response => response.json())
-            // .then(response => console.log(response))
-            .then(response => this.setState({ product: response }))
-            .then(r => {
-                window.audioPlayer.pause()
-                window.audioPlayer.src = this.state.product.sizes[0].audio
-                window.audioPlayer.play()
-            })
+        this.getProduct(this.props.params.productId)
+      
+    }
+
+    componentWillReceiveProps(nextProps){
+        if(nextProps.params !== this.props.params){
+            this.getProduct(nextProps.params.productId)
+        }
     }
 
     setCurrentSize(index) {
@@ -47,10 +46,33 @@ class ProductView extends Component {
         window.audioPlayer.play()
     }
 
+    getProduct(id){
+        fetch(window.apiHost + '/api/products/' + id)
+            .then(response => response.json())
+            .then(response => this.setState({ product: response }))
+            .then(r => {
+                if (window.location.href.includes('/product/1')){
+                    window.audioPlayer.pause()
+                    window.audioPlayer.src = "/audio/styletoberestyled.mp3" 
+                    window.audioPlayer.play()
+                }
+                else {
+                    window.audioPlayer.pause()
+                    window.audioPlayer.src = this.state.product.sizes[0].audio
+                    window.audioPlayer.play()
+                }
+            })
+    }
+
+
+    // pushId(){
+    //     var Id=(this.state.product.id)
+    //     browserHistory.push('/product')
+    // }
 
     render() {
-        console.log(this.state.product)
-        const currentSize = this.state.product.sizes[this.state.currentSize]
+   
+      const currentSize = this.state.product.sizes[this.state.currentSize]
 
         return (
             <div>
@@ -59,7 +81,7 @@ class ProductView extends Component {
                     <div className="columns">
                         <div className="column is-4">
                             {currentSize.styles.length < 3 ?
-                                <CarouselImg photo={currentSize.photo} photoTwo={currentSize.styles[0] ? currentSize.styles[0].photo : ''} photoThree={currentSize.styles[1] ? currentSize.styles[1].photo : ''} /> :
+                                <CarouselImg tabIndex="0" photo={currentSize.photo} photoTwo={currentSize.styles[0] ? currentSize.styles[0].photo : ''} photoThree={currentSize.styles[1] ? currentSize.styles[1].photo : ''} /> :
                                 <BigImg photo={currentSize.photo} />
                             }
                         </div>
@@ -77,13 +99,17 @@ class ProductView extends Component {
                                 ''}
                         
                         </div>
-                        <div className="column is-1 navColumn">
+                    <div className="column is-1 navColumn">
                     
-                        <div className="pageNavOne"><i className="fa fa-forward fa-3x fa-border" aria-hidden="false" onClick={() => browserHistory.push('/products/')}></i></div>
-                        
-                        
+                        <div className="pageNavOne">
+                            {this.props.params.productId < 2 ?
+                                <i tabIndex="0" className="fa fa-forward fa-3x fa-border" aria-hidden="false" onClick={() => browserHistory.push('/product/' + (Number(this.props.params.productId)+ 1))}></i>
+                            :
+                                <i tabIndex="0" className="fa fa-forward fa-3x fa-border" aria-hidden="false" onClick={() => browserHistory.push('/products/')}></i>
+                            }
                         </div>
-                    </div>
+                     </div>
+                        
 
                     {currentSize.styles.length === 3 ?
                         <div className="thumbNailStyles is-hidden-desktop">
@@ -95,6 +121,7 @@ class ProductView extends Component {
                         </div> :
                         ''}
 
+                </div>
                 </div>
             </div>
         );

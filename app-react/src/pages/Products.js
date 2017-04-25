@@ -3,6 +3,8 @@ import { browserHistory } from 'react-router';
 import Iam from '../components/Iam';
 import Product from '../components/Product';
 
+window.audioPlayer = document.querySelector('#audioPlayer')
+
 class Products extends Component {
     constructor(props) {
         super(props)
@@ -15,21 +17,36 @@ class Products extends Component {
         fetch(window.apiHost + '/api/collections')
         .then(response => response.json())
         .then(response => this.setState({collections: response}))
-        .then(blah => console.log(this.state.collections))
+        .then(r => {
+                if (window.location.href.includes('/products/')){
+                    window.audioPlayer.pause()
+                    window.audioPlayer.src = "/audio/Samba.mp3" 
+                    window.audioPlayer.play()
+                }    
     }
+        )
+    }
+
+
+
 
     render() {
-        const collections = this.state.collections.map((collection, index) => <Product key={index} className={"collection" + index} {...collection} />)
+        // const collections = this.state.collections.map((collection, index) => <Product key={index} className={"collection" + index} {...collection} />)
 
         return <div>
-            <Iam />
+            <Iam justLogo={true} />
             <div className="columns">
-                {collections}
+                <Product className={"collection0"} {...this.state.collections[1]} index={1} />
+                <Product className={"collection1"} {...this.state.collections[2]} index={2} />
+                <Product className={"collection2"} {...this.state.collections[3]} index={3} />
+                <Product className={"collection3"} {...this.state.collections[4]} index={4} />
             </div>
-        </div>
-    }
+            </div>
+        
+       
+    
 }
-
+}
 
 
 export default Products;
