@@ -4,16 +4,17 @@ import { browserHistory } from 'react-router';
 class Product extends Component {
   render() { 
     return (
-      <div className="column is-one-quarter" onClick={() => browserHistory.push('/checkout/' + this.props.id)}>
-        <div className="frameRed">
-          <div className="productImage">
-            <img src={this.props.sizes[0].photo} alt={this.props.sizes[0].title} />
+          <div tabIndex="0" className="column is-one-quarter" title={this.props.title} onClick={() => browserHistory.push('/product/checkout/' + this.props.index)}>
+        <div tabIndex="0" className="collectionImageBackground">
+          <div tabIndex="0" className={"collectionImage" + this.props.className}>
+            <img src={this.props.photo} alt={this.props.title} />
           </div>
         </div>
       </div>
     );
   }
 }
+  
 
 export default Product;
 
