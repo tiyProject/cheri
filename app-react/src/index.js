@@ -10,7 +10,7 @@ import Sizes from './components/Sizes';
 import ThankYou from './pages/ThankYou';
 
 
-window.apiHost = 'https://agile-lowlands-46592.herokuapp.com/';
+window.apiHost = '';
 
 ReactDOM.render(
   <Router history={browserHistory}>
