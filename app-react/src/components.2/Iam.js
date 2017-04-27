@@ -33,7 +33,12 @@ class Iam extends React.Component {
                 <div className="nav-center" style={{padding: '20px'}}>
                     {
                         this.props.justLogo === true ?
-                        <img src="/img/cherilogo.gif" className="iAMLogo" alt="Chéri" onClick={() => browserHistory.push('/')} /> : 
+                        <img src="/img/cherilogo.gif" className="iAMLogo" alt="Chéri" onClick={() => browserHistory.push('/')}/> 
+                        
+
+                        
+                        
+                        : 
                         <div>
                             {this.state.showLogo === false ?
                                 <span>
