@@ -18,7 +18,7 @@ class Categories extends Component {
     componentWillMount() {
         fetch(window.apiHost + '/api/collections')
             .then(response => response.json())
-            .then(console.log("Test"))
+            .then(response => console.log("Test"))
             .then(console.log(response))
             .then(response => this.setState({ collections: response }))
             .then(console.log("Test"))
