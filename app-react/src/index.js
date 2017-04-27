@@ -10,7 +10,7 @@ import Sizes from './components/Sizes';
 import ThankYou from './pages/ThankYou';
 
 
-window.apiHost = '';
+// window.apiHost = 'https://cheri-online.herokuapp.com/';
 
 ReactDOM.render(
   <Router history={browserHistory}>
