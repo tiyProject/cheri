@@ -64,8 +64,6 @@ class ProductView extends Component {
             })
     }
 
-
-
     render() {
    
       const currentSize = this.state.product.sizes[this.state.currentSize]
@@ -125,34 +123,3 @@ class ProductView extends Component {
 }
 
 export default ProductView;
-
-// <div className="column is-7">
-//                 <div className="card">
-//                     <header className="card-header">
-//                         <p className="card-header-title">
-//                             Wow, a glam outfit !
-//                         </p>
-//                     </header>
-//                     <div className="card-content">
-//                         <div className="content">
-//                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> Phasellus nec iaculis mauris.
-//                         </div>
-                            // <div className="field">
-                            //   <label className="label">Size</label>
-                            //   <p className="control">
-                            //     <span className="select">
-                            //       <select>
-                            //         <option>XSMALL</option>
-                            //         <option>SMALL</option>
-                             //        <option>MEDIUM</option> 
-                             //        <option>LARGE</option> 
-                            //       </select>
-                            //     </span>
-                            //   </p>
-                            // </div>
-//                         <ul>
-//                             <li className="inline"><em className="price">$PRICE</em></li>
-//                             <li className="inline"><a className="button is-light purchase">I want it</a></li>
-//                         </ul>
-//                     </div>
-//                 </div>
