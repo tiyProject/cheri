@@ -19,7 +19,7 @@ class Categories extends Component {
         fetch(window.apiHost + '/api/collections')
             .then(response => response.json())
             .then(response => this.setState({ collections: response }))
-            .then(console.log(response))
+            .then(console.log(this.state.collections))
             .then(blah => console.log(this.state.collections[0].photo))
             console.log(this.props)
     }
