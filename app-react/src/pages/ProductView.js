@@ -65,10 +65,6 @@ class ProductView extends Component {
     }
 
 
-    // pushId(){
-    //     var Id=(this.state.product.id)
-    //     browserHistory.push('/product')
-    // }
 
     render() {
    
