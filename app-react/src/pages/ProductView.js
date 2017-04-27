@@ -53,7 +53,7 @@ class ProductView extends Component {
             .then(r => {
                 if (window.location.href.includes('/product/1')){
                     window.audioPlayer.pause()
-                    window.audioPlayer.src = "/audio/styletoberestyled.mp3" 
+                    window.audioPlayer.src = "/audio/styletoberestyledfinal.mp3" 
                     window.audioPlayer.play()
                 }
                 else {
