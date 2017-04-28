@@ -18,11 +18,7 @@ class Categories extends Component {
     componentWillMount() {
         fetch(window.apiHost + '/api/collections')
             .then(response => response.json())
-            .then(response => console.log("Test"))
-            .then(console.log(response))
             .then(response => this.setState({ collections: response }))
-            .then(console.log("Test"))
-            .then(console.log(this.state.collections))
             .then(blah => console.log(this.state.collections[0].photo))
             console.log(this.props)
     }
@@ -56,7 +52,7 @@ class Categories extends Component {
                                     <article className="tile is-child notification wallpaperImage">
                                         <p className="title infoTitle">Seeing is believing...</p>
                                         <p className="subtitle subtitleInfo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;but so is <strong className="italic">hearing:</strong></p>
-                                        <p className="infomation">With Chéri, unique shopping features allow the buyer, the wearer, the feeler~ to be perfectly whoever they are, because whoever you are, Chéri looks good on <strong className="you">you</strong><br/><br/></p>
+                                        <p className="infomation">With Chéri, unique shopping features allow the buyer, the wearer, the feeler~ to be perfectly whoever they are, because whoever you are, Chéri looks good on <strong className="you">you</strong><br/><br/></p> 
                                     </article>
                                 </div>
                             </div>
@@ -100,7 +96,7 @@ class Categories extends Component {
                     </footer>
             </div>
 
-
+        
     }
 }
 

@@ -11,6 +11,7 @@ import ThankYou from './pages/ThankYou';
 
 
 // window.apiHost = 'https://cheri-online.herokuapp.com/';
+window.apiHost = '';
 
 ReactDOM.render(
   <Router history={browserHistory}>
